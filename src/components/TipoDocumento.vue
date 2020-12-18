@@ -1,8 +1,7 @@
 <template>
   <div> 
-    <h3>Tipo de documento</h3>
     <select name="tipo_documento" id="tipo_documento">
-      <option v-for="(value,index) in tipo_documentos" v-bind:key="index">{{value.nombre}}</option>
+      <option v-for="(value,index) in tipo_documentos" v-bind:key="index">{{value.abreviatura}}</option>
     </select>
   </div>
 </template>
@@ -20,6 +19,7 @@ export default {
     axios.get("http://127.0.0.1:8000/tipo_documento")
       .then((result) => {  
         self.tipo_documentos = result.data
+        console.log(self.tipo_documentos)
       }).catch((error) => { alert(error)});
   }
 }

@@ -1,6 +1,21 @@
 <template>
 <div> 
-  <tipo-documento></tipo-documento><input type="text" placeholder="Numero"/>
+  
+  
+  <b-container v-if="doc != null">
+    <b-col md="12">
+      {{ doc.codigo }}
+      <!--
+      <tipo-documento></tipo-documento>
+      <b-form-input type="text" placeholder="Numero"></b-form-input>
+      <b-form-input type="date" v-if="documento.tipo_documento.vence == true" v-model="documento.fecha_vigencia"></b-form-input>
+-->
+
+    </b-col>
+    
+  </b-container>
+
+  
 </div>
 
 </template>
@@ -14,8 +29,20 @@ export default {
   components:{
     TipoDocumento
   },
+  props:{
+     doc: {}
+  },
+   
+  
   data: function(){
-    return { tipo_documentos:[]
+    return { 
+      tipo_documentos:[],
+      documento: {
+        id: 0,
+        nombre: "",
+        abreviatura: "",
+        vence: false
+      }
     }
   },
 }
