@@ -1,26 +1,31 @@
 <template>
 <div> 
-<h3>Documento</h3>
+  <h3>Nombres</h3><input type="text"/><br>
+  <h3>Apellidos</h3><input type="text"/><br>
+  <h3>Fecha de Nacimiento</h3><input type="date" id="start" name="trip-start"
+       value="2005-06-30"
+       min="1900-01-01" >
+  <h3>Nacionalidad</h3><input type="text"/><br>
+  <documento></documento>
+  <button>Enviar</button>
 </div>
 
 </template>
 
 <script>
-/*import axios from'axios';
+import axios from'axios';
+import Documento from './components/Documento';
+
 export default {
   name: 'App',
-  data: function(){
-    return { tipo_documentos:[]
-    }
+  components:{
+    Documento
   },
-  created: function(){
-    let self = this
-    axios.get("http://127.0.0.1:8000/tipo_documento")
-      .then((result) => {  
-        self.tipo_documentos = result.data
-      }).catch((error) => { alert(error)});
-  }
-}*/
+  /*data: function(){
+    return { documento:[]
+    }
+  },*/
+}
 </script>
 
 <style>

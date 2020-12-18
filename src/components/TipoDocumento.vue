@@ -1,22 +1,15 @@
 <template>
-<div> 
-  <label for="cars">Tipo de Documento</label>
-
-<select name="tipo_documento" id="tipo_documento">
-  <option v-for="(value,index) in tipo_documentos" v-bind:key="index">{{value.nombre}}</option>
-  
-</select>
-
-
-
-</div>
-
+  <div> 
+    <select name="tipo_documento" id="tipo_documento">
+      <option v-for="(value,index) in tipo_documentos" v-bind:key="index">{{value.abreviatura}}</option>
+    </select>
+  </div>
 </template>
 
 <script>
 import axios from'axios';
 export default {
-  name: 'App',
+  name: 'tipo-documento',
   data: function(){
     return { tipo_documentos:[]
     }
