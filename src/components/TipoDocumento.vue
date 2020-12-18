@@ -1,7 +1,8 @@
 <template>
   <div> 
+    <h3>Tipo de documento</h3>
     <select name="tipo_documento" id="tipo_documento">
-      <option v-for="(value,index) in tipo_documentos" v-bind:key="index">{{value.abreviatura}}</option>
+      <option v-for="(value,index) in tipo_documentos" v-bind:key="index">{{value.nombre}}</option>
     </select>
   </div>
 </template>

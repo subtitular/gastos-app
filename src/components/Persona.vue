@@ -1,18 +1,15 @@
 <template>
-  <div id=Persona class="persona">
+  <div id="Persona" class="persona">
     <h3>Nombres</h3>
-    <input type="text" v-model="nombres.nombres">
+    <input type="text" v-model="nombres.nombres" />
     <br />
     <h3>Apellidos</h3>
-    <input type="text" v-model="nombres.apellidos">
+    <input type="text" v-model="nombres.apellidos" />
     <br />
     <h3>Fecha de Nacimiento</h3>
-    <input
-      type="date"
-      v-model = fecha_nacimiento
-    />
+    <input type="date" v-model="fecha_nacimiento" />
     <h3>Nacionalidad</h3>
-    <input type="text" v-model="nombres.nacionalidad">
+    <input type="text" v-model="nombres.nacionalidad" />
     <br />
     <br />
     <br />
@@ -34,16 +31,20 @@ export default {
     return {
       idpersona: 0,
       nombres: "",
-      fecha_nacimiento: ""
+      fecha_nacimiento: "",
     };
   },
   created: function () {
     this.idpersona = this.$route.params.idpersona;
 
     let self = this;
-    axios .get("http://127.0.0.1:8000/persona/" + self.idpersona).then((result) => {
+    axios
+      .get("http://127.0.0.1:8000/persona/" + self.idpersona)
+      .then((result) => {
         self.nombres = result.data[0];
-        self.fecha_nacimiento = moment(self.nombres.fecha_nacimiento).format('YYYY-MM-DD')
+        self.fecha_nacimiento = moment(self.nombres.fecha_nacimiento).format(
+          "YYYY-MM-DD"
+        );
       })
       .catch((error) => {
         alert(error);
