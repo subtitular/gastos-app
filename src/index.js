@@ -1,15 +1,21 @@
-import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Persona from '@/components/Persona'
-
-Vue.use(Router)
+import TipoDocumento from '@/components/TipoDocumento'
+import App from './App'
 
 export default new Router({
+  mode: 'history',
+  base: __dirname,
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: "root",
+      component: App
+    },
+    {
+      path: '/hello',
+      name: "helloword",
       component: HelloWorld
     },
     {

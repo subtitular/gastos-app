@@ -1,13 +1,8 @@
 <template>
 <div> 
-  <h3>Nombres</h3><input type="text"/><br>
-  <h3>Apellidos</h3><input type="text"/><br>
-  <h3>Fecha de Nacimiento</h3><input type="date" id="start" name="trip-start"
-       value="2005-06-30"
-       min="1900-01-01" >
-  <h3>Nacionalidad</h3><input type="text"/><br>
-  <documento></documento>
-  <button>Enviar</button>
+    <div class="main-component">
+      <router-view></router-view>
+    </div>
 </div>
 
 </template>
