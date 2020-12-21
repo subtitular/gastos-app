@@ -5,6 +5,7 @@ import App from './App'
 import vueRouter from 'vue-router'
 import BootstrapVue from 'bootstrap-vue'
 import router from '.'
+import Home from './components/Home'
 // import TipoDocumento from './src/components'
 
 Vue.use(vueRouter);
@@ -18,6 +19,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: { App,Home },
   template: '<App/>'
 })

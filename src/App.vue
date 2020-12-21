@@ -10,6 +10,7 @@
 <script>
 import axios from'axios';
 import Documento from './components/Documento';
+//import Home from './components/Home';
 
 export default {
   name: 'App',
