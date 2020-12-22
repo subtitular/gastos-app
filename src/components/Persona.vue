@@ -38,6 +38,15 @@
             >
             </b-form-input>
           </b-form-group>
+          </b-form-group>
+          <b-form-group id="grupo-5" label="Saldo:" description="">
+            <b-form-input
+              id="saldo"
+              v-model="nombres.saldo"
+              type="number"
+            >
+            </b-form-input>
+          </b-form-group>
           <b-button type="submit" variant="primary">Enviar</b-button>
         </b-col>
       </b-form>
@@ -62,6 +71,7 @@ export default {
       fecha_nacimiento: "",
     };
   },
+
   created: function () {
     this.idpersona = this.$route.params.idpersona;
 
@@ -69,7 +79,7 @@ export default {
     axios
       .get("http://127.0.0.1:8000/persona/" + self.idpersona)
       .then((result) => {
-        self.nombres = result.data[0];
+        self.nombres = result.data;
         self.fecha_nacimiento = moment(self.nombres.fecha_nacimiento).format(
           "YYYY-MM-DD"
         );

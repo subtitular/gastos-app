@@ -1,7 +1,7 @@
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Persona from '@/components/Persona'
-import TipoDocumento from '@/components/TipoDocumento'
+import Transaccion from '@/components/Transaccion'
+import TransacionConsulta from '@/components/TablaTransacciones'
 import App from './App'
 
 export default new Router({
@@ -10,13 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: "root",
-      component: App
-    },
-    {
-      path: '/hello',
-      name: "helloword",
-      component: HelloWorld
+      name: 'transaccion',
+      component: Transaccion
     },
     {
       path: '/persona/:idpersona',
@@ -24,9 +19,14 @@ export default new Router({
       component: Persona
     },
     {
-      path: '/tipo_documento',
-      name: 'tipo_documento',
-      component: TipoDocumento
+      path: '/transaccion',
+      name: 'transaccion',
+      component: Transaccion
+    },
+    {
+      path: '/transaccion/consulta',
+      name: 'trasaccion_consulta',
+      component: TransacionConsulta
     }
 
   ]
