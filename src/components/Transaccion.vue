@@ -125,7 +125,7 @@ export default {
   methods: {
     grabaTransaccion: function(){
         var self = this
-        axios.post("http://127.0.0.1:8000/transaccion/", JSON.stringify(self.form),  {headers: {}})
+        axios.post("https://byrsapp.herokuapp.com/transaccion/", JSON.stringify(self.form),  {headers: {}})
             .then((result) => {
                 alert("La transaccion se agrego correctamente");
 

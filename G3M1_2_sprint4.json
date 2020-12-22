@@ -11,15 +11,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/persona/1",
-					"protocol": "http",
+					"raw": "https://byrsapp.herokuapp.com/persona/1",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"byrsapp",
+						"herokuapp",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"persona",
 						"1"
@@ -43,15 +41,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/transaccion/",
-					"protocol": "http",
+					"raw": "https://byrsapp.herokuapp.com/transaccion/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"byrsapp",
+						"herokuapp",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"transaccion",
 						""
@@ -66,15 +62,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/transaccion/consulta",
-					"protocol": "http",
+					"raw": "https://byrsapp.herokuapp.com/transaccion/consulta",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"byrsapp",
+						"herokuapp",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"transaccion",
 						"consulta"

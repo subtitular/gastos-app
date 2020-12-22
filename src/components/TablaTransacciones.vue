@@ -54,7 +54,7 @@ export default {
   created: function() {
     let self = this;
     axios
-      .get("http://127.0.0.1:8000/transaccion/consulta/")
+      .get("https://byrsapp.herokuapp.com/transaccion/consulta/")
       .then(result => {
         self.items = result.data;
         /*            self.fecha_nacimiento = moment(self.nombres.fecha_nacimiento).format(

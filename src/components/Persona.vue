@@ -77,7 +77,7 @@ export default {
 
     let self = this;
     axios
-      .get("http://127.0.0.1:8000/persona/" + self.idpersona)
+      .get("https://byrsapp.herokuapp.com/persona/" + self.idpersona)
       .then((result) => {
         self.nombres = result.data;
         self.fecha_nacimiento = moment(self.nombres.fecha_nacimiento).format(
